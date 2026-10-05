@@ -6,6 +6,9 @@ use App\Http\Controllers\MahasiswaController;
 
 use App\Http\Controllers\MatakuliahController;
 
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\HomeController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -43,3 +46,6 @@ Route::put('/matakuliah/{kode}', [MatakuliahController::class, 'update']);
 Route::delete('/matakuliah/{kode}', [MatakuliahController::class, 'destroy']);
 
 route::get('/home', [HomeController::class, 'index']);
+
+Route::post('question/store', [QuestionController::class, 'store'])
+		->name('question.store');
