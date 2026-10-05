@@ -41,3 +41,5 @@ Route::get('/matakuliah/show/{kode?}', [MatakuliahController::class, 'show']);
 Route::get('/matakuliah/{kode}/edit', [MatakuliahController::class, 'edit']);
 Route::put('/matakuliah/{kode}', [MatakuliahController::class, 'update']);
 Route::delete('/matakuliah/{kode}', [MatakuliahController::class, 'destroy']);
+
+route::get('/home', [HomeController::class, 'index']);
